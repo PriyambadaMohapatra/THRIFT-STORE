@@ -58,7 +58,7 @@ p{
 /*showcase*/
 #showcase{
     min-height: 400px;
-    background-image: url('/minor_project/image/bg.PNG');
+    background-image: url("/image/bg.PNG");
     background-size: 800px 800px ;
     background-color: #24242573;
     text-align: center;
