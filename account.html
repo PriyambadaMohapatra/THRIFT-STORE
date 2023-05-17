@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
+    <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
+    <meta name="author" content="THE TECH GUYS">
+    <title>Thrift Store | PRODUCT</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="image/LOGO.jpg" width=" 250px">
+                </div>
+            
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="product.html">PRODUCT</a></li>
+                        <li><a href="account.html">ACCOUNT</a></li>
+                        <li><a href="sellwithus.html">SELL WITH US</a></li>
+                    </ul>
+                </nav>
+                <img src="image/cart.png" width="30px" height="30px">
+                <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </header>
+<!-------- account-page------>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="image/thrift-stores.jpg" width="70%">
+            </div>
+
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="Submit" class="btn">Login</button>
+                        <br> 
+                    </form>
+                    <br>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <button type="Submit" class="btn">Register</button>
+                        
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="image/LOGO.jpg" >
+                    <p> Our purpose is to promote and affordable fashion</p>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">Thrift Store &copy;2023</p>
+        </div>
+    </footer>
+<!----js menu ------>
+    <script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if (menuitems.style.maxHeight=="0px") {
+            menuitems.style.maxHeight="200px";
+        }
+        else{
+            menuitems.style.maxHeight="0px";
+        }
+    }
+    </script>
+<!------- js for toggle form----->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+    </script>
+</body>
+</html>
