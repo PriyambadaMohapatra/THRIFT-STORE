@@ -408,6 +408,7 @@ form a{
 #sell_banner h2{
     background-color: #130f1bc1;
     padding: 40px;
+    color:#fff;
 }
 /*media query*/
 @media only screen and (max-width:800px){
