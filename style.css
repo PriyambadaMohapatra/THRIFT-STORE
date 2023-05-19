@@ -408,6 +408,26 @@ form a{
 #sell_banner h2{
     background-color: #130f1bc1;
     padding: 40px;
+    color: #fff;
+}
+#sell_page img{
+    border-radius: 100px;
+}
+.sell_btn{
+    align-items: center;
+    margin-left: 80px;
+}
+.sell{
+    padding: 30px;
+    margin: 30px;
+    margin-top:60px;
+    font-size: larger;
+    width: 50%;
+    align-self: center;
+    background-color: rgb(245, 235, 220);
+}
+.sell:hover{
+    background-color: gray;
 }
 /*media query*/
 @media only screen and (max-width:800px){
