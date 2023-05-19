@@ -428,6 +428,7 @@ form a{
 }
 .sell:hover{
     background-color: gray;
+    color:#fff;
 }
 /*media query*/
 @media only screen and (max-width:800px){
