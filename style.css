@@ -54,6 +54,9 @@ p{
     margin-left: 28px;
     display: none;
 }
+.acc{
+    margin-left:20px
+}
 
 /*showcase*/
 #showcase{
@@ -323,7 +326,7 @@ td:last-child{
 th:last-child{
     text-align: right;
 }
-/*account page*/
+/*log in page*/
 .account-page{
     padding: 50px 0;
     background-image: url("image/back.jpg");
@@ -393,6 +396,18 @@ form a{
     margin-top: 8px;
     transform: translateX(100px);
     transition: transform 1s;
+}
+/*sell with us*/
+#sell_banner{
+    background-image: url("image/back.jpg");
+    color: #130f1b;
+    padding: 150px;
+    text-align: center;
+    font-size: larger;
+}
+#sell_banner h2{
+    background-color: #130f1bc1;
+    padding: 40px;
 }
 /*media query*/
 @media only screen and (max-width:800px){
