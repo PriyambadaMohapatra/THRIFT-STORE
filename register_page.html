@@ -7,7 +7,7 @@
     <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
     <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
     <meta name="author" content="THE TECH GUYS">
-    <title>Thrift Store | CART</title>
+    <title>Thrift Store | LOG IN</title>
     <link rel="stylesheet"  type="text/css" href="style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <nav>
                     <ul id="menuitems">
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="about.html">ABOUT</li>
                         <li><a href="product.html">PRODUCT</a></li>
                         <li><a href="account.html">ACCOUNT</a></li>
                         <li><a href="sellwithus.html">SELL WITH US</a></li>
@@ -33,73 +33,28 @@
             </div>
         </div>
     </header>
- <!-----cart item details----->
- <div class="small-container  cart-page">
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="image/tshirt45.jpg">
-                    <div>
-                        <p>Black Printed Tshirt</p>
-                        <small>Price:Rs 1000</small>
-                        <br>
-                        <a href="">Remove</a>
+<!-------- account-page------>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="register()">Register</span>
                     </div>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="phone no.">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <button type="Submit" class="btn">Register</button>  
+                    </form>
                 </div>
-            </td>
-            <td>Rs 1000</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="image/tshirt.jpg">
-                    <div>
-                        <p>Denim Tshirt</p>
-                        <small>Price:Rs 700</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td>Rs 700</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="image/tshrit2.jpg">
-                    <div>
-                        <p>Dark Green Tshirt</p>
-                        <small>Price:Rs 500</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td>Rs 500</td>
-        </tr>
-    </table>
-    <div class="total-price">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>Rs 2200</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>Rs 100</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>Rs 2300</td>
-            </tr>
-        </table>
+            </div>
+        </div>
     </div>
- </div>   
+</div>
     <footer>
         <div class="container">
             <div class="row">

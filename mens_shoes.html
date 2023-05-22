@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
+    <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
+    <meta name="author" content="THE TECH GUYS">
+    <title>Thrift Store | PRODUCT</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="image/LOGO.jpg" width=" 250px">
+                </div>
+            
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="product.html">PRODUCT</a></li>
+                        <li><a href="account.html">ACCOUNT</a></li>
+                        <li><a href="sellwithus.html">SELL WITH US</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="image/cart.png" width="30px" height="30px"></a>
+                <a href="log_in.html"><img  class="acc" src ="image/account.png"></a>
+                <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="navigation">
+                <div class="dropdown">
+                    <button class="drpbtn">CLOTHES
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="men_clothes.html">MEN</a>
+                      <a href="women_clothes.html">WOMEN</a>
+                    </div>
+                </div>
+                <a href="bags.html">BAGS</a>
+                <a href="accessories.html">ACCESSORIES</a>
+                <div class="dropdown">
+                    <button class="drpbtn">FOOTWARE
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="mens_shoes.html">MEN</a>
+                      <a href="women_shoes.html">WOMEN</a>
+                    </div>
+                </div>
+                <a href="books.html">BOOKS</a>
+            </div>
+        </div>
+    </header>
+    <section class="categories">
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>MEN'S FOOTWARE</h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="image/sh.JPG" height="200px" width="250px">
+                    <h4>BROWN FORMAL POINT SHOES</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <a href="product-details.html"><img src="image/product-10.jpg" height="200px" width="250px"></a>
+                    <h4>BLACK SPORTS SHOES</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/lof.jpg" height="200px" width="250px">
+                    <h4>BROWN LOAFERS</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/product-11.jpg" height="200px" width="250px">
+                    <h4>GREY SPORTS SHOES</h4>
+                    <p>RS 700</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/BLACK SHOES.jpg" height="200px" width="250px">
+                    <h4>BLACK FORMAL SHOES</h4>
+                    <p>Rs 800</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/BLACK SNEAKERS.jpg" height="200px" width="250px">
+                    <h4>BLACK SNEAKERS</h4>
+                    <p>RS 1000</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <a href="about.html"><li>About Us</li></a>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="image/LOGO.jpg" >
+                    <p> Our purpose is to promote and affordable fashion</p>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">Thrift Store &copy;2023</p>
+        </div>
+    </footer>
+<!----js menu ------>
+    <script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if (menuitems.style.maxHeight=="0px") {
+            menuitems.style.maxHeight="200px";
+        }
+        else{
+            menuitems.style.maxHeight="0px";
+        }
+    }
+    </script>
+</body>
+</html>

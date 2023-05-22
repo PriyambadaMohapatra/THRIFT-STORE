@@ -57,7 +57,6 @@ p{
 .acc{
     margin-left:20px
 }
-
 /*showcase*/
 #showcase{
     min-height: 400px;
@@ -214,6 +213,68 @@ select:focus{
     background-color: #fff;
     color: #130f1b;
 }
+/*PRODUCT NAV BAR*/
+.navigation a {
+float: left;
+font-size: 16px;
+color:#130f1b;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .drpbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: #130f1b;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit; /* Important for vertical align on mobile phones */
+margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navigation a:hover, .dropdown:hover .drpbtn {
+background-color: #ccc;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
 
 /* single product details */
 .single-product{
@@ -334,7 +395,7 @@ th:last-child{
 .form-container{
     background: #130f1ba1;
     width: 300px;
-    height: 400px;
+    height: 450px;
     position: relative;
     text-align: center;
     padding:20px 0;
@@ -387,15 +448,10 @@ form .btn:focus{
 }
 form a{
     font-size: 12px;
+    color: #fff;
 }
-#Indicator{
-    width: 100px;
-    border: none;
-    background: rgb(180, 180, 194);
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(100px);
-    transition: transform 1s;
+.form-container p{
+    color: #fff;
 }
 /*sell with us*/
 #sell_banner{
@@ -416,6 +472,7 @@ form a{
 .sell_btn{
     align-items: center;
     margin-left: 80px;
+    padding: 0 50px;
 }
 .sell{
     padding: 30px;
@@ -429,6 +486,65 @@ form a{
 .sell:hover{
     background-color: gray;
     color:#fff;
+}
+/*sell_form*/
+.product-page{
+    padding: 20px 0;
+    background-image: url("image/back.jpg");
+}
+.form-space{
+    background: #130f1ba1;
+    width: 400px;
+    height: 900px;
+    position: relative;
+    text-align: center;
+    padding:20px ;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-space form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top:60px;
+    transition: transform 1s;
+}
+.form-space h2{
+    color: #ccc;
+}
+form select{
+    font-size: medium;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+form a{
+    font-size: 12px;
+    color: #fff;
+}
+.form-space p{
+    color: #fff;
+}
+form{
+    color: #fff;
+    line-height: 50px;
+    text-align: left;
+    align-items: center;
+}
+form #image{
+    border: none;
+    background-color: rgba(128, 128, 128, 0.546);
+
 }
 /*media query*/
 @media only screen and (max-width:800px){

@@ -7,8 +7,9 @@
     <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
     <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
     <meta name="author" content="THE TECH GUYS">
-    <title>Thrift Store | SELL PAGE</title>
+    <title>Thrift Store | PRODUCT</title>
     <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -27,39 +28,73 @@
                         <li><a href="sellwithus.html">SELL WITH US</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src ="image/cart.png" width="30px" height="30px"></a>
+                <a href="cart.html"><img src="image/cart.png" width="30px" height="30px"></a>
                 <a href="log_in.html"><img  class="acc" src ="image/account.png"></a>
                 <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
-        </div>
-    </header>
-    <section id="sell_page">
-        <div id="sell_banner"> 
-            <h2>SELL YOUR PRELOVED PRODUCT WITH US!!</h2>
-        </div>
-        <div class="small-container">
-            <div class="row">
-                <div class="col">
-                    <img src="image/one.jpg" height="200px" width="200px">
-                    <h4>Sell</h4>
-                    <p>Click on the "sell with us" button and fill the about product details</p>
+            <div class="navigation">
+                <div class="dropdown">
+                    <button class="drpbtn">CLOTHES
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="men_clothes.html">MEN</a>
+                      <a href="women_clothes.html">WOMEN</a>
+                      <a href="product.html">ALL PRODUCTS</a>
+                    </div>
                 </div>
-                <div class="col">
-                    <img src="image/two.jpg" height="200px" width="200px">
-                    <h4>Pick-Up Details form</h4>
-                    <p>When the product is bought a pick-up information form will pop in your e-mail fill it.</p>
+                <a href="bags.html">BAGS</a>
+                <a href="accessories.html">ACCESSORIES</a>
+                <div class="dropdown">
+                    <button class="drpbtn">FOOTWEAR
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="mens_shoes.html">MEN</a>
+                      <a href="women_shoes.html">WOMEN</a>
+                    </div>
                 </div>
-                <div class="col">
-                    <img src="image/three.jpg" height="200px" width="200px">
-                    <h4>Get Paid</h4>
-                    <p>As soon as the customer pays the amount it will be transfer to your bank</p>
-                </div>
+                <a href="books.html">BOOKS</a>
             </div>
         </div>
-        <div class="sell_btn">
-            <a href="sell_form.html"><button class="sell" type="button">SELL WITH US</button></a>
+    </header>
+    <section class="categories">
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>BAGS</h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="image/LAPTOP BAG.jpg" height="200px" width="250px">
+                    <h4>LAPTOP BAG</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <a href="product-details.html"><img src="image/BLUEBAG.jpg" height="200px" width="250px"></a>
+                    <h4>BLUE HAND BAG</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/DARKBLUEBAG.jpg" height="200px" width="250px">
+                    <h4>DARK BLUE HAND BAG</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="image/TOTBAG.jpg" height="200px" width="250px">
+                    <h4>THIRFT TOT BAG</h4>
+                    <p>RS 700</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -88,7 +123,7 @@
         </div>
     </footer>
 <!----js menu ------>
- <script>
+    <script>
     var menuitems = document.getElementById("menuitems");
     menuitems.style.maxHeight="0px";
 
@@ -100,6 +135,6 @@
             menuitems.style.maxHeight="0px";
         }
     }
- </script>
+    </script>
 </body>
 </html>

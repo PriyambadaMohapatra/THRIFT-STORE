@@ -7,7 +7,7 @@
     <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
     <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
     <meta name="author" content="THE TECH GUYS">
-    <title>Thrift Store | ACCOUNT</title>
+    <title>Thrift Store | LOG IN</title>
     <link rel="stylesheet"  type="text/css" href="style.css">
 </head>
 <body>
@@ -21,26 +21,72 @@
                 <nav>
                     <ul id="menuitems">
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="about.html">ABOUT</li>
                         <li><a href="product.html">PRODUCT</a></li>
                         <li><a href="account.html">ACCOUNT</a></li>
                         <li><a href="sellwithus.html">SELL WITH US</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src ="image/cart.png" width="30px" height="30px"></a>
+                <a href="cart.html"><img src="image/cart.png" width="30px" height="30px"></a>
                 <a href="log_in.html"><img  class="acc" src ="image/account.png"></a>
                 <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
     </header>
-    
+<div class="product-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="form-space">
+                    <h2>Product-Details</h2>
+                    <form>
+                        <label>PRODUCT NAME
+                        <input type="text" placeholder="Enter Product Name">
+                        </label>
+                        <label>TYPE
+                            <select>
+                                <option>MEN</option>
+                                <option>WOMENS</option>
+                            </select>
+                        </label>
+                        <label>CATEGORIES
+                            <select>
+                                <option>CLOTHES</option>
+                                <option>BAG</option>
+                                <option>SHOES</option>
+                                <option>ACCESSORIES</option>
+                                <option>BOOKS</option>
+                            </select>
+                        </label><br>
+                        <label>SIZE
+                            <input type="text" placeholder="Enter Size">
+                        </label>
+                        <label>PRODUCT DESCRIPTION
+                            <input type="text" placeholder="Enter Product description">
+                        </label>
+                        <label>PRICE
+                            <input type="text" placeholder="Enter Price">
+                        </label>
+                        <label>PRODUCT IMAGE
+                            <input type="file" name="image" id="image" placeholder="Choose Image">
+                        </label>
+                        <label>PICK-UP LOCATION
+                            <input type="text" placeholder="Enter Pick-Up Location">
+                        </label>
+                        <button type="submit" class="btn">SELL NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="footer-col-1">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li>About Us</li>
+                        <a href="about.html"><li>About Us</li></a>
                         <li>Terms and Conditions</li>
                         <li>Privacy Policy</li>
                     </ul>
@@ -62,7 +108,7 @@
         </div>
     </footer>
 <!----js menu ------>
- <script>
+    <script>
     var menuitems = document.getElementById("menuitems");
     menuitems.style.maxHeight="0px";
 
@@ -74,6 +120,6 @@
             menuitems.style.maxHeight="0px";
         }
     }
- </script>
+    </script>
 </body>
 </html>
