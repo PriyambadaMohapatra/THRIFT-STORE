@@ -1,0 +1,1025 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
+    <meta name="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
+    <meta name="author" content="THE TECH GUYS">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Thrift Store | PRODUCT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    body {
+        background-color: rgb(20, 20, 30);
+        color: #ffffff;
+    }
+
+    .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        overflow: hidden;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /*header*/
+    header {
+        background-color: #ffffff;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+    }
+
+    nav ul {
+        display: inline-block;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #130f1b;
+    }
+
+    p {
+        color: #ffffff;
+    }
+
+    .menu-icon {
+        width: 28px;
+        margin-left: 28px;
+        display: none;
+    }
+
+    .acc {
+        margin-left: 20px
+    }
+
+    /*showcase*/
+    #showcase {
+        min-height: 400px;
+        background-image: url("{% static '/image/bg.PNG' %}");
+        background-size: 800px 800px;
+        background-color: #24242573;
+        text-align: center;
+        color: #ffffff;
+        font-size: 300%;
+    }
+
+    .bg {
+        background-color: #130f1b94;
+        margin-top: 80px;
+    }
+
+    .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .col {
+        flex-basis: 33%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+
+    .categories h2 {
+        text-align: center;
+        background-color: rgb(245, 235, 220);
+        color: #130f1b;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .small-container h4 {
+        font-weight: normal;
+    }
+
+    .small-container p {
+        font-size: small;
+    }
+
+    .col:hover {
+        transform: translateY(-5px);
+    }
+
+    /*about*/
+    .about {
+
+        color: #130f1b;
+        padding: 3%;
+        font-size: 100%;
+        line-height: 180%;
+        border-radius: 2%;
+        margin-bottom: 5%;
+    }
+
+    .content h2 {
+        text-align: center;
+        background-color: rgb(245, 235, 220);
+        color: #130f1b;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /*footer*/
+    footer {
+        background-color: rgba(245, 235, 220, 0.845);
+        color: #130f1b;
+        font-size: 14px;
+        padding: 60px 0 20px;
+
+    }
+
+    footer p {
+        color: #130f1b;
+    }
+
+    footer h4 {
+        margin-bottom: 20px;
+
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-1 {
+        flex-basis: 30%;
+        text-align: center;
+    }
+
+    .footer-col-2 {
+        flex: 1;
+        text-align: center;
+        margin: 0 10px 0 10px;
+    }
+
+    .footer-col-2 img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-3 {
+        flex-basis: 30%;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    /*about us page*/
+    #main-col h1 {
+        text-align: center;
+    }
+
+    #main-col p {
+        background-color: rgba(245, 235, 220, 0.845);
+        line-height: 35px;
+        text-align: justify;
+        padding: 10px;
+        margin: 10px;
+        color: #130f1b;
+    }
+
+    #main-col img {
+
+        width: 100%;
+    }
+
+    /*ALL PRODUCTS*/
+    .row-2 {
+        justify-content: space-between;
+        margin: 100px auto 50px;
+    }
+
+    select {
+        border: 1px solid #fff;
+        padding: 5px;
+    }
+
+    select:focus {
+        outline: none;
+    }
+
+    .page-btn {
+        margin: 0 auto 80px;
+    }
+
+    .page-btn span {
+        display: inline-block;
+        border: 1px solid #fff;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40 px;
+        cursor: pointer;
+    }
+
+    .page-btn span:hover {
+        background-color: #fff;
+        color: #130f1b;
+    }
+
+    .product_btn {
+        border: 1px solid #fff;
+        padding: 2px;
+        margin: 5px;
+        margin-top: 9px;
+    }
+
+    .product_btn:hover {
+        background-color: #fff;
+        color: #130f1b;
+    }
+
+    /*PRODUCT NAV BAR*/
+    .navigation a {
+        float: left;
+        font-size: 16px;
+        color: #130f1b;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .drpbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #130f1b;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+        margin: 0;
+        /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navigation a:hover,
+    .dropdown:hover .drpbtn {
+        background-color: #ccc;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* single product details */
+    .single-product {
+        margin-top: 80px;
+    }
+
+    .single-product .col-2 img {
+        padding: 0;
+
+    }
+
+    .single-product .col-2 {
+        padding: 20px;
+    }
+
+    .single-product h4 {
+        margin: 20px 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .single-product input {
+        width: 50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 20px;
+        margin-right: 10px;
+        border: 1px solid #130f1b;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .small-img-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-img-col {
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+
+    .col-2 {
+        color: #130f1b;
+    }
+
+    .col-2 p {
+        color: #130f1b;
+    }
+
+    .col-2 .btn {
+        background-color: #ccc;
+        border: #130f1b;
+        border-width: 13px;
+        padding: 10px;
+    }
+
+    .col-2 .btn:hover {
+        background-color: aqua;
+    }
+
+    .col-2 h3 {
+        margin-top: 20px;
+    }
+
+    .small-container h2 {
+        color: #130f1b;
+    }
+
+    .small-container .single-product p {
+        color: #130f1b;
+    }
+
+
+    /*cart item details*/
+    .cart-page {
+        margin: 80px auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .cart-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cart-info p {
+        color: #ffffff;
+    }
+
+    th {
+        text-align: left;
+        padding: 5px;
+        color: #130f1b;
+        background: rgb(180, 180, 194);
+        font-weight: normal;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+
+    td a {
+        color: rgb(180, 180, 194);
+        font-size: 12px;
+    }
+
+    td img {
+        width: 80 px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    .total-price {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .total-price table {
+        border-top: 3px solid rgb(180, 180, 194);
+        width: 100%;
+        max-width: 440px;
+    }
+
+    td:last-child {
+        text-align: right;
+    }
+
+    th:last-child {
+        text-align: right;
+    }
+
+    /*log in page*/
+    .account-page {
+        padding: 50px 0;
+        background-image: url("{% static 'image/back.jpg' %}");
+    }
+
+    .form-container {
+        background: #130f1ba1;
+        width: 300px;
+        height: 450px;
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        margin: auto;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .form-container span {
+        font-weight: bold;
+        padding: 0 10px;
+        color: #fff;
+        cursor: pointer;
+        width: 100px;
+        display: inline-block;
+    }
+
+    .form-btn {
+        display: inline-block;
+    }
+
+    .form-container form {
+        max-width: 300px;
+        padding: 0 20px;
+        position: absolute;
+        top: 130px;
+        transition: transform 1s;
+    }
+
+    form input {
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+    }
+
+    form .btn {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+    form .btn:focus {
+        outline: none;
+    }
+
+    #LoginForm {
+        left: -300px;
+    }
+
+    #RegForm {
+        left: 0;
+    }
+
+    #RegForm .btn {
+        padding: 10px;
+    }
+
+    form a {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .form-container p {
+        color: #fff;
+    }
+
+    /*sell with us*/
+    #sell_banner {
+        background-image: url("{% static 'image/back.jpg' %}");
+        color: #130f1b;
+        padding: 150px;
+        text-align: center;
+        font-size: larger;
+    }
+
+    #sell_banner h2 {
+        background-color: #130f1bc1;
+        padding: 40px;
+        color: #fff;
+    }
+
+    #sell_page img {
+        border-radius: 100px;
+    }
+
+    .sell_btn {
+        align-items: center;
+        margin-left: 80px;
+        padding: 0 50px;
+    }
+
+    .sell {
+        padding: 30px;
+        margin: 30px;
+        margin-top: 60px;
+        font-size: larger;
+        width: 50%;
+        align-self: center;
+        background-color: rgb(245, 235, 220);
+    }
+
+    .sell:hover {
+        background-color: gray;
+        color: #fff;
+    }
+
+    /*sell_form*/
+    .product-page {
+        padding: 20px 0;
+        background-image: url("{% static 'image/back.jpg' %}");
+    }
+
+    .form-space {
+        background: #130f1ba1;
+        width: 400px;
+        height: 900px;
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        margin: auto;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .form-btn {
+        display: inline-block;
+    }
+
+    .form-space form {
+        max-width: 300px;
+        padding: 0 20px;
+        position: absolute;
+        top: 60px;
+        transition: transform 1s;
+    }
+
+    .form-space h2 {
+        color: #ccc;
+    }
+
+    form select {
+        font-size: medium;
+    }
+
+    form .btn {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+    form .btn:focus {
+        outline: none;
+    }
+
+    form a {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .form-space p {
+        color: #fff;
+    }
+
+    form {
+        color: #fff;
+        line-height: 50px;
+        text-align: left;
+        align-items: center;
+    }
+
+    form #image {
+        border: none;
+        background-color: rgba(128, 128, 128, 0.546);
+
+    }
+
+    .col-md-3 {
+        display: inline-block;
+        margin-left: -4px;
+    }
+
+    .carousel-indicators .active {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .col-md-3 img {
+        width: 170px;
+        height: 200px;
+    }
+
+    body .carousel-indicator li {
+        background-color: blue;
+    }
+
+    body .carousel-indicators {
+        bottom: -40px;
+    }
+
+    .carousel-indicators li {
+
+
+        background-color: #7270fc;
+    }
+
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: auto;
+        bottom: auto;
+        padding-top: 222px;
+    }
+
+    body .no-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .search-box{
+        margin-bottom: 1rem !important;
+    }
+    .sear-btn{
+        width: 70px !important;
+        margin-bottom: 0.4rem !important;
+    }
+    /*media query*/
+    @media only screen and (max-width:800px) {
+        .menu-icon {
+            display: block;
+        }
+
+        nav ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #130f1b;
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 0.5;
+        }
+
+        nav ul li {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 50px;
+        }
+
+        nav a {
+            color: #ffffff;
+        }
+
+        #showcase h1 {
+            font-size: 50px;
+            margin-top: 60px;
+        }
+
+        .row {
+            text-align: center;
+        }
+
+        .col {
+            flex-basis: 100%;
+        }
+
+        .navbar {
+            padding-left: 0px;
+            margin-left: 0px;
+        }
+
+        .single-product .row {
+            text-align: left;
+        }
+
+        .single-product .col-2 {
+            padding: 20px 0;
+        }
+
+        .single-product h1 {
+            font-size: 26px;
+            line-height: 22px;
+        }
+
+        .cart-info {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'image/LOGO.jpg'%}" width=" 250px">
+                </div>
+
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="{% url 'home' %}">HOME</a></li>
+                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'ResaleHome' %}">PRODUCT</a></li>   
+                    </ul>
+                </nav>
+                <div class="search-box" style="margin-left: 15px;">
+                    <li>
+                        <form method='get' action='/resale/search/' class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search"
+                                id="search"> <br>
+                            <button class="sear-btn btn btn-secondary my-4 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                    
+                    </li>
+                </div>
+                <a href="{% url 'login' %}"><img class="acc" src="{% static 'image/account.png'%}"></a>
+                <img src="{% static 'image/menu.png'%}" class="menu-icon" onclick="menutoggle()">
+    
+                
+                
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'sellwithus' %}">SELL WITH US</a></li>
+                    <li style="width:148px;">
+                        <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body"
+                            data-toggle="popover" data-placement="bottom" data-html="true"
+                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            Cart(<span id="cart">0</span>)
+                        </button>
+                    </li>
+                    {% endif %}
+            </div>
+
+
+    </header>
+    <section class="categories">
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>ALL PRODUCTS</h2>
+            </div>
+            
+            <section class="white-section" id="resale">
+                <h1>Category-wise Products</h1>
+                <div class="container-fluid">
+                    {% for product, range, nSlides in allProds %}
+                    <h5 class="my-4" style="text-align: center;font-family:Montserrat;font-size: 25px;">
+                        {{product.0.category}}
+                    </h5>
+                    <div class="row">
+                        <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel" style="padding-right: 0px;
+                    padding-left: 0px;">
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+                                {% for i in range %}
+                                <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+                                {% endfor %}
+                            </ul>
+                            <div class="container carousel-inner px-auto mx-auto">
+                                <div class="carousel-item active">
+                                    {% for i in product %}
+                                    <div class="col-xs-3 col-sm-3 col-md-3 pt-4" style="margin-right: 80px;">
+                                        <div class="card align-items-center"
+                                            style="width: 18rem;background-color: #00000000; padding-top:25px;font-family:Montserrat">
+
+                                            <img src="{{i.image.url}}" class="card-img-top" alt="..." style="width: 15rem;height: 18rem;">
+                                            <div class="card-body">
+                                                <h4 class="card-title" id="namepr{{i.id}}">Product Name: {{i.product_name}} </h4>
+                                                <p>Size: {{i.size}}</p>
+                                                <p class="card-text">Description: {{i.desc|slice:"0:20"}}...</p><br>
+                                                <h6 class="card-title">Price: <span
+                                                        id="pricepr{{i.id}}">{{i.price}}</span></h6>
+                                                <span id="divpr{{i.id}}" class="divpr">
+                                                    <button id="pr{{i.id}}" class="btn btn-secondary cart">Add To
+                                                        Cart</button>
+                                               
+                                                </span>
+                                                <a href="/resale/products/{{i.id}}"><button id="qv{{i.id}}"
+                                                        class="btn btn-secondary cart">QuickView</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+                                </div>
+                                <div class="carousel-item">
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <a href="{% url 'about' %}">
+                            <li>About Us</li>
+                        </a>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'image/LOGO.jpg'%}">
+                    <p> Our purpose is to promote and affordable fashion</p>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">Thrift Store &copy;2023</p>
+        </div>
+    </footer>
+    <!----js menu ------>
+    <script>
+        var menuitems = document.getElementById("menuitems");
+        menuitems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuitems.style.maxHeight == "0px") {
+                menuitems.style.maxHeight = "200px";
+            }
+            else {
+                menuitems.style.maxHeight = "0px";
+            }
+        }
+        // Find out the cart items from localStorage
+        if (localStorage.getItem('cart') == null) {
+            var cart = {};
+        } else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+            updateCart(cart);
+        }
+
+        // If the add to cart button is clicked, add/increment the item
+        //$('.cart').click(function() {
+        $('.divpr').on('click', 'button.cart', function () {
+            var idstr = this.id.toString();
+            if (cart[idstr] != undefined) {
+                qty = cart[idstr][0] + 1;
+            } else {
+                qty = 1;
+                name = document.getElementById('name' + idstr).innerHTML;
+                price = document.getElementById('price' + idstr).innerHTML;
+                cart[idstr] = [qty, name, parseInt(price)];
+
+            }
+            updateCart(cart);
+
+        });
+
+        $('#popcart').popover();
+        updatePopover(cart);
+
+        function updatePopover(cart) {
+            console.log('We are inside updatePopover');
+            var popStr = "";
+            popStr = popStr + "<h5> Add products to your cart </h5><div class='mx-2 my-2'>";
+            var i = 1;
+            for (var item in cart) {
+                popStr = popStr + "<b>" + i + "</b>. ";
+                popStr = popStr+document.getElementById('name' + item).innerHTML.slice(0, 19) + "... Qty: " + cart[item][0] + '<br>';
+                i = i + 1;
+
+            }
+
+            popStr = popStr + "</div> <a href='/resale/checkout'><button class='btn btn-secondary' id ='checkout'>Add</button></a> <button class='btn btn-secondary' onclick='clearCart()' id ='clearCart'>Clear</button>     "
+            console.log(popStr);
+            document.getElementById('popcart').setAttribute('data-content', popStr);
+            $('#popcart').popover('show');
+
+        }
+
+        function clearCart() {
+            cart = JSON.parse(localStorage.getItem('cart'));
+            for (var item in cart) {
+                document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="btn btn-secondary cart">Add To Cart</button>'
+            }
+            localStorage.clear();
+            cart = {};
+            updateCart(cart);
+
+
+        }
+
+        function updateCart(cart) {
+            var sum = 0;
+            for (var item in cart) {
+                sum = sum + cart[item][0];
+
+
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            document.getElementById('cart').innerHTML = sum;
+            console.log(cart);
+            updatePopover(cart);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

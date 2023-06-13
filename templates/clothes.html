@@ -1,0 +1,760 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFFORDABLE SECOND HAND ITEMS,THIRFT STORE">
+    <meta name ="keywords" content="thrift,clothes,shoes,bags,sell items,buy items,thrift store">
+    <meta name="author" content="THE TECH GUYS">
+    <title>Thrift Store | PRODUCT</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: rgb(20, 20, 30);
+    color: #ffffff;
+}
+.container{
+   max-width: 1300px;
+   margin: auto;   
+   padding-left: 25px;
+   padding-right: 25px;
+   overflow:hidden;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*header*/
+header{
+    background-color: #ffffff;
+}
+.navbar{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #130f1b;
+}
+p{
+    color: #ffffff;
+}
+.menu-icon{
+    width:28px;
+    margin-left: 28px;
+    display: none;
+}
+.acc{
+    margin-left:20px
+}
+/*showcase*/
+#showcase{
+    min-height: 400px;
+    background-image: url("{% static '/image/bg.PNG'%}");
+    background-size: 800px 800px ;
+    background-color: #24242573;
+    text-align: center;
+    color: #ffffff;
+    font-size: 300%;
+}
+.bg{
+    background-color: #130f1b94;
+    margin-top: 80px;
+}
+.small-container{
+    max-width:1080px;
+    margin:auto;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.col{
+    flex-basis: 33%;
+    padding:10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.categories h2{
+    text-align: center;
+    background-color: rgb(245, 235, 220);
+    color: #130f1b;
+    margin: 10px;
+    padding: 10px;
+}
+.small-container h4{
+    font-weight: normal;
+}
+.small-container p{
+    font-size: small;
+}
+.col:hover{
+    transform: translateY(-5px);
+}
+/*about*/
+.about{
+    
+    color: #130f1b;
+    padding: 3%;
+    font-size: 100%;
+    line-height: 180%;
+    border-radius: 2%;
+    margin-bottom: 5%;
+}
+.content h2{
+    text-align: center;
+    background-color: rgb(245, 235, 220);
+    color: #130f1b;
+    margin: 10px;
+    padding: 10px;
+}
+/*footer*/
+footer{
+    background-color: rgba(245, 235, 220, 0.845);
+    color: #130f1b;
+    font-size: 14px;
+    padding: 60px 0 20px;
+
+}
+footer p{
+    color: #130f1b;
+}
+footer h4{
+    margin-bottom: 20px;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+    text-align: center;
+}
+.footer-col-2{
+    flex:1;
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+.footer-col-2 img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-3{
+    flex-basis: 30%;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+.copyright{
+    text-align: center;
+}
+/*about us page*/
+#main-col h1{
+    text-align: center;
+}
+#main-col p{
+    background-color: rgba(245, 235, 220, 0.845) ;
+    line-height: 35px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    color: #130f1b;
+}
+#main-col img{
+    
+    width: 100%;
+}
+/*ALL PRODUCTS*/
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #fff;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin:0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40 px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background-color: #fff;
+    color: #130f1b;
+}
+.product_btn{
+    border: 1px solid #fff;
+    padding: 2px;
+    margin: 5px;
+    margin-top: 9px;
+}
+.product_btn:hover{
+    background-color: #fff;
+    color: #130f1b;
+}
+/*PRODUCT NAV BAR*/
+.navigation a {
+float: left;
+font-size: 16px;
+color:#130f1b;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .drpbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: #130f1b;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit; /* Important for vertical align on mobile phones */
+margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navigation a:hover, .dropdown:hover .drpbtn {
+background-color: #ccc;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* single product details */
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+
+}
+.single-product .col-2 {
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #130f1b;
+}
+input:focus{
+    outline: none;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.col-2{
+    color: #130f1b;
+}
+.col-2 p{
+    color: #130f1b;
+}
+.col-2 .btn{
+    background-color: #ccc;
+    border: #130f1b;
+    border-width: 13px;
+    padding: 10px;
+}
+.col-2 .btn:hover{
+    background-color: aqua;
+}
+.col-2 h3{
+    margin-top: 20px;
+}
+.small-container h2{
+    color: #130f1b;
+}
+.small-container .single-product  p{
+    color:#130f1b;
+}
+
+
+/*cart item details*/
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-info p{
+    color: #ffffff;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #130f1b;
+    background: rgb(180, 180, 194);
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td a{
+    color: rgb(180, 180, 194);
+    font-size: 12px;
+}
+td img{
+    width: 80 px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid rgb(180, 180, 194);
+    width: 100%;
+    max-width: 440px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+/*log in page*/
+.account-page{
+    padding: 50px 0;
+    background-image: url("{% static 'image/back.jpg'%}");
+}
+.form-container{
+    background: #130f1ba1;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    text-align: center;
+    padding:20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+    display:inline-block ;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+#RegForm .btn{
+    padding: 10px;
+}
+form a{
+    font-size: 12px;
+    color: #fff;
+}
+.form-container p{
+    color: #fff;
+}
+/*sell with us*/
+#sell_banner{
+    background-image: url("{% static 'image/back.jpg'%}");
+    color: #130f1b;
+    padding: 150px;
+    text-align: center;
+    font-size: larger;
+}
+#sell_banner h2{
+    background-color: #130f1bc1;
+    padding: 40px;
+    color: #fff;
+}
+#sell_page img{
+    border-radius: 100px;
+}
+.sell_btn{
+    align-items: center;
+    margin-left: 80px;
+    padding: 0 50px;
+}
+.sell{
+    padding: 30px;
+    margin: 30px;
+    margin-top:60px;
+    font-size: larger;
+    width: 50%;
+    align-self: center;
+    background-color: rgb(245, 235, 220);
+}
+.sell:hover{
+    background-color: gray;
+    color:#fff;
+}
+/*sell_form*/
+.product-page{
+    padding: 20px 0;
+    background-image: url("{% static 'image/back.jpg'%}");
+}
+.form-space{
+    background: #130f1ba1;
+    width: 400px;
+    height: 900px;
+    position: relative;
+    text-align: center;
+    padding:20px ;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-space form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top:60px;
+    transition: transform 1s;
+}
+.form-space h2{
+    color: #ccc;
+}
+form select{
+    font-size: medium;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+form a{
+    font-size: 12px;
+    color: #fff;
+}
+.form-space p{
+    color: #fff;
+}
+form{
+    color: #fff;
+    line-height: 50px;
+    text-align: left;
+    align-items: center;
+}
+form #image{
+    border: none;
+    background-color: rgba(128, 128, 128, 0.546);
+
+}
+/*media query*/
+@media only screen and (max-width:800px){
+    .menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        top:70px;
+        left: 0;
+        background-color: #130f1b;
+        width:100%;
+        overflow: hidden;
+        transition: max-height 0.5;
+    }
+    nav ul li{
+        display: block;
+        margin-top:10px;
+        margin-bottom:10px;
+        margin-right: 50px;
+    }
+    nav a{
+        color: #ffffff;
+    }
+    #showcase h1{
+        font-size: 50px;
+        margin-top: 60px;
+    }
+    .row{
+        text-align: center;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .navbar{
+        padding-left: 0px;
+        margin-left:0px ;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 22px;
+    }
+    .cart-info{
+        display: none;
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'image/LOGO.jpg'%}" width=" 250px">
+                </div>
+            
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="{% url 'home' %}">HOME</a></li>
+                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'ResaleHome' %}">PRODUCT</a></li>
+                        <li><a href="{% url 'sellwithus' %}">SELL WITH US</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="{% static 'image/cart.png' %}" width="30px" height="30px"></a>
+                <a href="log_in.html"><img  class="acc" src ="{% static 'image/account.png' %}"></a>
+                <img src="{% static 'image/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </header>
+    <section class="categories">
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>CLOTHES</h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'image/product-6.jpg' %}" height="200px" width="250px">
+                    <h4>BLACK PUMA TSHIRT</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <a href="product-details.html"><img src="{% static 'image/tshirt45.jpg' %}" height="200px" width="250px"></a>
+                    <h4>BLACK & BLUE TSHIRT</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/shirt3.jpg' %}" height="200px" width="250px">
+                    <h4>BLACK CHECKS SHIRT</h4>
+                    <p>Rs 600</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/t2.jpg' %}" height="200px" width="250px">
+                    <h4>BLACK SKINFIT JEANS</h4>
+                    <p>RS 700</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/trouser.jpg' %}" height="200px" width="250px">
+                    <h4>FORMAL GREY TROUSERS</h4>
+                    <p>Rs 800</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/kur3.jpg' %}" height="200px" width="250px">
+                    <h4>TRADITIONAL KURTA|MINT GREEN</h4>
+                    <p>Rs 500</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/ku2.jpg' %}" height="200px" width="250px">
+                    <h4>BLACK EMBROIDED KIRTA</h4>
+                    <p>Rs 700</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/girl tshirt.jpg' %}" height="200px" width="250px">
+                    <h4>WHITE PRINTED TSHIRT</h4>
+                    <p>Rs 400</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+                <div class="col">
+                    <img src="{% static 'image/girltshirt.jpg' %}" height="200px" width="250px">
+                    <h4>PINK TSHIRT</h4>
+                    <p>Rs 500</p>
+                    <a href=""><button class="product_btn">Add To Cart</button></a>
+                    <a href="product-details.html"><button class="product_btn">View</button></a>
+                </div>
+              
+            </div>
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>&#8594</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <a href="about.html"><li>About Us</li></a>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'image/LOGO.jpg'%}0" >
+                    <p> Our purpose is to promote and affordable fashion</p>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">Thrift Store &copy;2023</p>
+        </div>
+    </footer>
+<!----js menu ------>
+    <script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if (menuitems.style.maxHeight=="0px") {
+            menuitems.style.maxHeight="200px";
+        }
+        else{
+            menuitems.style.maxHeight="0px";
+        }
+    }
+    </script>
+</body>
+</html>
